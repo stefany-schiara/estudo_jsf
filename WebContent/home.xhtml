@@ -4,38 +4,79 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://xmlns.jcp.org/jsf/core"      
       xmlns:h="http://xmlns.jcp.org/jsf/html"    
-      xmlns:p="http://primefaces.org/ui"  >
+      xmlns:p="http://primefaces.org/ui"  
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 	<h:head>
 		<title>Bem vindo</title>
 	</h:head>
-<h:body>
+<h:body style="background-image: url('https://s-media-cache-ak0.pinimg.com/originals/63/85/05/638505da477d23226ed4e114ce6be518.jpg'); overflow:hidden">
 	
 		<h:form id="form">
+			<p:growl id="growl" life="2000" />
+			<div id="conteudo">
 			
-    			<p:carousel value="#{carouselView.cars}" var="car" itemStyle="text-align:center" responsive="true">
-        			<p:panelGrid columns="1" style="width:100%;margin:10px 0px" columnClasses="label,value" layout="grid" styleClass="ui-panelgrid-blank">
-            			<f:facet name="header">
-                		<!--	<p:graphicImage name="images/car/#{car.brand}.gif"/> !--> 
-            			</f:facet>
+			<p:growl id="messages"/>
  
-			           <!--  <h:outputText value="Id:" />
-			            <h:outputText value="#{car.id}" />
-			 
-			            <h:outputText value="Year" />
-			            <h:outputText value="#{car.year}" />
-			 
-			            <h:outputText value="Color:" />
-			            <h:outputText value="#{car.color}" style="color:#{car.color}"/>
-			 
-			            <h:outputText value="Price" />
-			            <h:outputText value="$#{car.price}" /> -->
-			            
-        			</p:panelGrid>
- 	        		<f:facet name="footer">
-                		
-        			</f:facet>
-    			</p:carousel>		
+    <p:menubar>
+        <p:submenu label="File" icon="ui-icon-document">
+            <p:submenu label="New" icon="ui-icon-contact">
+                <p:menuitem value="Project" url="#" />
+                <p:menuitem value="Other" url="#" />
+            </p:submenu>
+            <p:menuitem value="Open" url="#" />
+            <p:separator />
+            <p:menuitem value="Quit" url="#" />
+        </p:submenu>
+ 
+        <p:submenu label="Edit" icon="ui-icon-pencil">
+            <p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
+            <p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+        </p:submenu>
+ 
+        <p:submenu label="Help" icon="ui-icon-help">
+            <p:menuitem value="Contents" url="#" />
+            <p:submenu label="Search" icon="ui-icon-search">
+                <p:submenu label="Text">
+                    <p:menuitem value="Workspace" url="#" />
+                </p:submenu>
+                <p:menuitem value="File" url="#" />
+            </p:submenu>
+        </p:submenu>
+ 
+        <p:submenu label="Actions" icon="ui-icon-gear">
+            <p:submenu label="Ajax" icon="ui-icon-refresh">
+                <p:menuitem value="Save" actionListener="#{menuView.save}" icon="ui-icon-disk" update="messages"/>
+                <p:menuitem value="Update" actionListener="#{menuView.update}" icon="ui-icon-arrowrefresh-1-w" update="messages"/>
+            </p:submenu>
+            <p:submenu label="Non-Ajax" icon="ui-icon-newwin">
+                <p:menuitem value="Delete" actionListener="#{menuView.delete}" icon="ui-icon-close" update="messages" ajax="false"/>
+            </p:submenu>
+        </p:submenu>
+ 
+        <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
+ 
+        <f:facet name="options">
+            <p:inputText style="margin-right:10px" placeholder="Search"/>
+            <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
+        </f:facet>
+    </p:menubar>
 			
-	    </h:form>
+			
+		
+				
+    			
+    			
+					
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+		</h:form>
 	</h:body>	
 </html>
