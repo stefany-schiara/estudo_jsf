@@ -1,6 +1,7 @@
 package info.thuannho.jsfshop;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -25,6 +26,7 @@ public class CarouselView implements Serializable {
 	     
 	    @PostConstruct
 	    public void init() {
+	    	cars = new ArrayList<Car>();
 	    	service = new CarService();
 	        cars = service.createCars(9);
 	    }
