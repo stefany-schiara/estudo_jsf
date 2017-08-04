@@ -13,12 +13,12 @@
 		<h:form id="form">
 			
     			<p:carousel value="#{carouselView.cars}" var="car" itemStyle="text-align:center" responsive="true">
-        			<p:panelGrid columns="2" style="width:100%;margin:10px 0px" columnClasses="label,value" layout="grid" styleClass="ui-panelgrid-blank">
+        			<p:panelGrid columns="1" style="width:100%;margin:10px 0px" columnClasses="label,value" layout="grid" styleClass="ui-panelgrid-blank">
             			<f:facet name="header">
-                			<p:graphicImage name="demo/images/car/#{car.brand}.gif"/> 
+                		<!--	<p:graphicImage name="images/car/#{car.brand}.gif"/> !--> 
             			</f:facet>
  
-			            <h:outputText value="Id:" />
+			           <!--  <h:outputText value="Id:" />
 			            <h:outputText value="#{car.id}" />
 			 
 			            <h:outputText value="Year" />
@@ -28,7 +28,7 @@
 			            <h:outputText value="#{car.color}" style="color:#{car.color}"/>
 			 
 			            <h:outputText value="Price" />
-			            <h:outputText value="$#{car.price}" />
+			            <h:outputText value="$#{car.price}" /> -->
 			            
         			</p:panelGrid>
  	        		<f:facet name="footer">
