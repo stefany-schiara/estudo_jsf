@@ -1,13 +1,23 @@
 package info.thuannho.jsfshop;
 
+import java.io.Serializable;
+
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.event.ActionEvent;
 
 @ManagedBean
-@RequestScoped
-public class HomeBean {
-	String titlePage = "Shop Management";
+@SessionScoped
+public class HomeBean implements Serializable {
+	
+	
+	private String titlePage = "cadastro.xhtml";
 
+    @PostConstruct
+    public void init() {
+    }
+	
 	public String getTitlePage() {
 		return titlePage;
 	}
@@ -16,4 +26,8 @@ public class HomeBean {
 		this.titlePage = titlePage;
 	}
 	
+	public String redirectCadastro() {
+        return "cadastro.xhtml";
+    }
+
 }
