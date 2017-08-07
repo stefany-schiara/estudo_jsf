@@ -7,6 +7,12 @@
     <load-on-startup>1</load-on-startup>
     
   </servlet>
+  
+  <listener>
+		<listener-class>
+			org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+	</listener>
+  
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>/faces/*</url-pattern>
@@ -33,13 +39,13 @@
     <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
     <param-value>resources.application</param-value>
   </context-param>
- 	  <!--
+ 
  <context-param>  
     <param-name>primefaces.THEME</param-name>  
-    <param-value>modena</param-value>  
+    <param-value>pepper-grinder</param-value>  
 </context-param>  
-    
- <listener>
+    	  
+<!--  <listener>
     <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
-  </listener> -->
+  </listener>  -->
 </web-app>
