@@ -39,6 +39,10 @@
     <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
     <param-value>resources.application</param-value>
   </context-param>
+  <context-param>
+        <param-name>org.apache.myfaces.RESOURCE_BUFFER_SIZE</param-name>
+        <param-value>32768</param-value>
+    </context-param>
  
  <context-param>  
     <param-name>primefaces.THEME</param-name>  
