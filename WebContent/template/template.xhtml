@@ -7,15 +7,17 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:t="http://myfaces.apache.org/tomahawk"
       xmlns:p="http://primefaces.org/ui">
+      
 	<h:head>
 		<div id="tituloPagina">
 			<ui:insert name="tituloPagina" />
 		</div>	
 	</h:head>
 	
-	<h:body style="background-image: url('/WebContent/images/cloud.jpg'); overflow:hidden">
-		<div id="pagina" >		
+	<h:body style="background-image: url('http://localhost:8080/jsf-shop-management/images/cloud.jpg'); overflow:hidden">
+		<div id="pagina">		
 			<div id="menu">			
+				
 				<ui:include src="menu.xhtml" />
 			</div>
 			<div id="conteudo">
