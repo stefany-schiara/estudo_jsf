@@ -7,19 +7,22 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:t="http://myfaces.apache.org/tomahawk"
       xmlns:p="http://primefaces.org/ui">
-<h:head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<h:head>
+		<div id="tituloPagina">
+			<ui:insert name="tituloPagina" />
+		</div>	
+	</h:head>
+	
+	<h:body style="background-image: url('/WebContent/images/cloud.jpg'); overflow:hidden">
+		<div id="pagina" >		
+			<div id="menu">			
+				<ui:include src="menu.xhtml" />
+			</div>
+			<div id="conteudo">
+				<ui:insert name="conteudoPagina" />
+			</div>
+		</div>	
+	</h:body>		
+	
 
-	<title>#{ResourceLabel.lbl_default_sistema}</title>
-	<h:outputStylesheet library="style" name="css/style.css" />
-	<h:outputScript library="js" name="locale-primefaces.js" />
-
-</h:head>
-<body>
-	<div id="pagina">
-		<div id="menu">
-			<ui:include src="menu.xhtml" />
-		</div>
-	</div>	
-</body>
 </html>

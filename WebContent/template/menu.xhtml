@@ -4,14 +4,16 @@
 <ui:composition xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
-<h:body style="background-image: url('https://s-media-cache-ak0.pinimg.com/originals/63/85/05/638505da477d23226ed4e114ce6be518.jpg'); overflow:hidden">
+<h:body >
 	<h:form id="formMenu">
 		<p:breadCrumb>
 		
 		     <p:menuitem value="#{ResourceLabel.lbl_home}" url="home"/>
-		     <p:menuitem value="#{ResourceLabel.lbl_cadastro}"   url="cadastro"/>
+		     <p:menuitem value="#{ResourceLabel.lbl_cadastro}"  url="/pages/cadastro/cadastro.xhtml"/>
 		   
 		</p:breadCrumb>
+		
+		
 		</h:form>
 		</h:body>
 		
