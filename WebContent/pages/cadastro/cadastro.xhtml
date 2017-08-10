@@ -16,22 +16,22 @@
 	<h:form id="form1">	
 		<h:panelGrid columns="2">
 		
-			<h:outputLabel value="Nome: " for="nome"/>
+			<h:outputLabel value="#{ResourceLabel.lbl_nome}" for="nome"/>
 			<h:inputText id="nome"/>
 			
-			<h:outputLabel value="Login: " for="login"/>
-			<h:inputText id="login"/>
+			<h:outputLabel value="#{ResourceLabel.lbl_usuario}" for="usuario"/>
+			<h:inputText id="usuario"/>
 			
-			<h:outputLabel value="Senha: " for="senha" />
-			<h:inputText  id="senha" />
+			<h:outputLabel value="#{ResourceLabel.lbl_senha}" for="senha" />
+			<h:inputSecret  id="senha" />
 			
-			<h:outputLabel value="Confirmar Senha: " for="senhaConfirma" />
-			<h:inputText  id="confirmarSenha" />
+			<h:outputLabel value="#{ResourceLabel.lbl_confirmaSenha}" for="confirmaSenha" />
+			<h:inputSecret  id="confirmaSenha" />
 			
-			<h:outputLabel value="E-mail: " for="email" />
-			<h:inputText id="senhaConfirma"/>
+			<h:outputLabel value="#{ResourceLabel.lbl_email}" for="email" />
+			<h:inputText id="email"/>
 			
-			<h:commandButton value="Enviar" />
+			<h:commandButton value="#{ResourceLabel.lbl_enviar}" />
 						
 		</h:panelGrid>
 	</h:form>
