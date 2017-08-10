@@ -7,6 +7,8 @@
       xmlns:p="http://primefaces.org/ui"  
       xmlns:ui="http://java.sun.com/jsf/facelets"
       template="/template/template.xhtml">
+      
+	 <ui:param name="managedBean"               value="#{CadastroMBean}" />
 	 
 	 <ui:define name="tituloPagina">
 			<title>Cadastro de Usuário</title>
@@ -17,21 +19,21 @@
 		<h:panelGrid columns="2">
 		
 			<h:outputLabel value="#{ResourceLabel.lbl_nome}" for="nome"/>
-			<h:inputText id="nome"/>
+			<h:inputText id="nome" value="#{managedBean.usuario.nome}" required="true" requiredMessage="Insira o nome"/>
 			
-			<h:outputLabel value="#{ResourceLabel.lbl_usuario}" for="usuario"/>
-			<h:inputText id="usuario"/>
+			<h:outputLabel value="#{ResourceLabel.lbl_userName}" for="userName"/>
+			<h:inputText id="apelido" value="#{managedBean.usuario.userName}" required="true" requiredMessage="Informe seu "/>
 			
 			<h:outputLabel value="#{ResourceLabel.lbl_senha}" for="senha" />
-			<h:inputSecret  id="senha" />
+			<h:inputSecret  id="senha" value="managedBean.usuario.senha"/>
 			
 			<h:outputLabel value="#{ResourceLabel.lbl_confirmaSenha}" for="confirmaSenha" />
-			<h:inputSecret  id="confirmaSenha" />
+			<h:inputSecret  id="confirmaSenha" value="#{managedBean.usuario.confirmaSenha}"/>
 			
 			<h:outputLabel value="#{ResourceLabel.lbl_email}" for="email" />
-			<h:inputText id="email"/>
+			<h:inputText id="email" value="#{managedBean.usuario.email}"/>
 			
-			<h:commandButton value="#{ResourceLabel.lbl_enviar}" />
+			<h:commandButton value="#{ResourceLabel.lbl_cadastrar}" action="#{managedBean.cadastrarUsuario}" />
 						
 		</h:panelGrid>
 	</h:form>
